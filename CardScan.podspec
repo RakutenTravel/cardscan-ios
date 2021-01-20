@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'RTCardScan'
-  s.version          = '2.0.7.4'
+  s.version          = '2.0.7.6'
   s.summary          = 'Scan credit cards'
   s.description      = <<-DESC
 CardScan is a library for scanning credit cards.
@@ -28,4 +28,4 @@ CardScan is a library for scanning credit cards.
     stripe.weak_frameworks = 'AVKit', 'CoreML', 'VideoToolbox', 'Vision', 'UIKit', 'AVFoundation'
     stripe.dependency  'Stripe'
   end
-
+end
