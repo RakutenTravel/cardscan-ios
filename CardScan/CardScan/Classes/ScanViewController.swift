@@ -12,7 +12,7 @@ import UIKit
     import Stripe
 #endif
 
-
+@available(iOS 11.2, *)
 @objc public protocol ScanDelegate {
     @objc func userDidCancel(_ scanViewController: ScanViewController)
     @objc func userDidScanCard(_ scanViewController: ScanViewController, creditCard: CreditCard)
@@ -79,6 +79,7 @@ import UIKit
     #endif
 }
 
+@available(iOS 11.2, *)
 @objc public class ScanViewController: ScanBaseViewController {
     
     public weak var scanDelegate: ScanDelegate?
@@ -124,7 +125,7 @@ import UIKit
         
         // The forced unwrap here is intentional -- we expect this to crash
         // if someone uses it with an invalid bundle
-        let bundle = BundleURL.bundle()!
+        let bundle = CSBundle.bundle()!
         
         let storyboard = UIStoryboard(name: "CardScan", bundle: bundle)
         let viewController = storyboard.instantiateViewController(withIdentifier: "scanCardViewController") as! ScanViewController
